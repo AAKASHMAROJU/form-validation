@@ -10,23 +10,42 @@
       <form id="form">
         <div class="form-fields">
           <label for="name">Full Name</label>
-          <input type="text" id="name" placeholder="Full Name" />
+          <input
+            type="text"
+            id="name"
+            placeholder="Full Name"
+            required
+            minlength="3"
+          />
         </div>
         <div class="form-fields">
           <label for="email"> email</label>
-          <input type="email" id="email" placeholder="email@add.com" />
+          <input type="email" id="email" placeholder="email@add.com" required />
         </div>
         <div class="form-fields">
           <label for="phone">phone Number</label>
-          <input type="tel" id="phone" placeholder="xxx-xxx-xxxx" />
+          <input
+            type="tel"
+            id="phone"
+            placeholder="xxx-xxx-xxxx"
+            required
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          />
         </div>
         <div class="form-fields">
           <label for="website">Website Link</label>
-          <input type="url" id="website" placeholder="https://url" />
+          <input type="url" id="website" placeholder="https://url" required />
         </div>
         <div class="form-fields">
           <label for="password1">Password</label>
-          <input type="password" id="password1" placeholder="Enter password" />
+          <input
+            type="password"
+            id="password1"
+            placeholder="Enter password"
+            required
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$"
+            title="your Password should contain atleast 1 Upper Case, 1 Lower Case, 1 Digit"
+          />
         </div>
         <div class="form-fields">
           <label for="password2">Re-Enter Password</label>
@@ -34,6 +53,9 @@
             type="password"
             id="password2"
             placeholder="Confirm Password"
+            required
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$"
+            title="your Password should contain atleast 1 Upper Case, 1 Lower Case, 1 Digit"
           />
         </div>
         <div class="form-fields">
