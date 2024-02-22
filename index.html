@@ -7,12 +7,13 @@
   <body>
     <div class="container">
       <h1>Form XYZ</h1>
-      <form id="form">
+      <form id="form" novalidate>
         <div class="form-fields">
           <label for="name">Full Name</label>
           <input
             type="text"
             id="name"
+            name="name"
             placeholder="Full Name"
             required
             minlength="3"
@@ -20,13 +21,20 @@
         </div>
         <div class="form-fields">
           <label for="email"> email</label>
-          <input type="email" id="email" placeholder="email@add.com" required />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="email@add.com"
+            required
+          />
         </div>
         <div class="form-fields">
           <label for="phone">phone Number</label>
           <input
             type="tel"
             id="phone"
+            name="phone"
             placeholder="xxx-xxx-xxxx"
             required
             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
@@ -34,13 +42,20 @@
         </div>
         <div class="form-fields">
           <label for="website">Website Link</label>
-          <input type="url" id="website" placeholder="https://url" required />
+          <input
+            type="url"
+            id="website"
+            name="website"
+            placeholder="https://url"
+            required
+          />
         </div>
         <div class="form-fields">
           <label for="password1">Password</label>
           <input
             type="password"
             id="password1"
+            name="password"
             placeholder="Enter password"
             required
             pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$"
@@ -62,11 +77,10 @@
           <button type="submit">Submit</button>
         </div>
       </form>
-      <div class="message">
+      <div id="message">
         <h3>Welcome to Form Validator</h3>
       </div>
     </div>
-
     <script src="script.js"></script>
   </body>
 </html>

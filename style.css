@@ -72,7 +72,7 @@ button:focus {
   outline: none;
 }
 
-.message {
+#message {
   border: 2px solid black;
   width: 90%;
   margin-bottom: 2rem;
